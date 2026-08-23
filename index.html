@@ -11,6 +11,37 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-18372592687');
+
+    function gtag_report_conversion(url) {
+      let navigationStarted = false;
+      const callback = function () {
+        if (!navigationStarted && typeof url !== 'undefined') {
+          navigationStarted = true;
+          window.location.href = url;
+        }
+      };
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18372592687/2Xs_CLDYx-YcEK-I3rhE',
+          'event_callback': callback,
+          'event_timeout': 1000
+        });
+        window.setTimeout(callback, 1100);
+      } else {
+        callback();
+      }
+      return false;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          gtag_report_conversion(link.href);
+        });
+      });
+    });
   </script>
 
   <title>Indore Taxi Service | Local, Airport & Outstation Cab</title>
