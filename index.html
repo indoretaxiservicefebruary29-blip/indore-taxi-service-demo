@@ -34,12 +34,24 @@
       return false;
     }
 
+    function gtag_report_whatsapp() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18372592687/-6uLCKDLx-YcEK-I3rhE'
+        });
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
         link.addEventListener('click', function (event) {
           event.preventDefault();
           gtag_report_conversion(link.href);
         });
+      });
+
+      document.querySelectorAll('a[href*="wa.me"], a.btn-whatsapp, a.floating-wa, a.wa').forEach(function (link) {
+        link.addEventListener('click', gtag_report_whatsapp);
       });
     });
   </script>
@@ -908,11 +920,13 @@
 
     function bookPlace(place){
       const msg=`Hello Indore Taxi Service, I want to book a taxi from Indore to ${place}. Please share fare and car options.`;
+      gtag_report_whatsapp();
       window.open(`https://wa.me/${businessPhone}?text=${encodeURIComponent(msg)}`,"_blank");
     }
 
     function bookRoute(route){
       const msg=`Hello Indore Taxi Service, I need fare details for ${route}. Please share available cars and complete charges.`;
+      gtag_report_whatsapp();
       window.open(`https://wa.me/${businessPhone}?text=${encodeURIComponent(msg)}`,"_blank");
     }
 
@@ -935,6 +949,7 @@ Pickup: ${document.getElementById("pickup").value.trim()}
 Drop: ${document.getElementById("drop").value.trim()}
 Trip Type: ${document.getElementById("tripType").value}
 Journey Date: ${document.getElementById("date").value}`;
+      gtag_report_whatsapp();
       window.open(`https://wa.me/${businessPhone}?text=${encodeURIComponent(msg)}`,"_blank");
     });
 
