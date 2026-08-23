@@ -67,8 +67,8 @@
     .menu-btn{display:none;border:0;background:transparent;color:#fff;font-size:27px}
 
     .hero{min-height:720px;position:relative;display:grid;align-items:center;isolation:isolate;background:
-      linear-gradient(90deg,rgba(2,13,25,.97) 0%,rgba(6,23,43,.83) 45%,rgba(6,23,43,.30) 100%),
-      url("https://commons.wikimedia.org/wiki/Special:FilePath/Rajwada-Indore.jpg?width=2000") center/cover no-repeat}
+      linear-gradient(90deg,rgba(2,13,25,.98) 0%,rgba(6,23,43,.86) 42%,rgba(6,23,43,.12) 78%,rgba(6,23,43,.04) 100%),
+      url("hero-premium-v2.png") center/cover no-repeat}
     .hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(2,13,25,.55),transparent 55%)}
     .hero-grid{padding:78px 0;display:grid;grid-template-columns:1.04fr .96fr;gap:54px;align-items:center}
     .hero-badge{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(255,196,0,.45);border-radius:999px;background:rgba(255,196,0,.08);color:var(--yellow);font-size:12px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;margin-bottom:18px}
@@ -122,7 +122,7 @@
     .car-photo:before{content:"";position:absolute;left:14px;right:14px;bottom:12px;height:18px;
       background:radial-gradient(ellipse at center, rgba(6,23,43,.18), rgba(6,23,43,0) 70%);
       filter:blur(4px)}
-    .car-photo img{width:100%;height:100%;object-fit:cover;border-radius:9px;
+    .car-photo img{width:100%;height:100%;object-fit:contain;border-radius:9px;
       filter:contrast(1.04) saturate(1.08) drop-shadow(0 12px 18px rgba(6,23,43,.16));
       transition:transform .35s ease, filter .35s ease}
     .car-card:hover .car-photo img{transform:scale(1.04);
@@ -428,9 +428,9 @@
     <section class="section section-soft" id="fleet">
       <div class="container">
         <div class="section-head reveal">
-          <div class="kicker">Our Premium Fleet</div>
-          <h2>Cars & Outstation Rates</h2>
-          <p>Click any car to see complete details and direct booking options.</p><p style="margin-top:8px;font-size:13px;color:#667085;">All listed cars now include visible photo cards, including budget, family, premium and group vehicles.</p>
+          <div class="kicker">Our Taxi Fleet</div>
+          <h2>Choose Your Car & Rate</h2>
+          <p>Rates and vehicle details are matched with the main Ganesh Indore Taxi Service website. Click any car for direct booking.</p><p style="margin-top:8px;font-size:13px;color:#667085;">Clean vehicle photos are used without any readable registration numbers.</p>
         </div>
 
         <div class="fleet-filter reveal">
@@ -443,164 +443,83 @@
 
         <div class="fleet-grid">
           <article class="car-card reveal" data-category="budget">
-            <div class="car-photo">
-              <img src="dzire.jpg" alt="Sedan Dzire taxi" loading="lazy">
-            </div>
+            <div class="car-photo"><img src="fleet-aura-noplate.png" alt="Hyundai Aura taxi without visible registration plate" loading="lazy"></div>
             <div class="car-body">
-              <span class="car-tag">Budget Sedan</span>
-              <h3>Sedan / Dzire</h3>
-              <div class="price">₹11<span>/km</span></div>
-              <div class="car-features">
-                <div><i class="fa-solid fa-user"></i> 4 Seater</div>
-                <div><i class="fa-solid fa-suitcase"></i> 3 Bags</div>
-                <div><i class="fa-solid fa-snowflake"></i> AC</div>
-                <div><i class="fa-solid fa-road"></i> Outstation</div>
-              </div>
-              <button class="btn btn-yellow" onclick="openCar('sedan')">View Details</button>
+              <span class="car-tag">Best Value Sedan</span><h3>Hyundai Aura</h3><div class="price">₹11<span>/km</span></div>
+              <div class="car-features"><div><i class="fa-solid fa-user"></i> 4 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 3 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Diesel</div></div>
+              <button class="btn btn-yellow" onclick="openCar('aura')">View Details</button>
+            </div>
+          </article>
+
+          <article class="car-card reveal" data-category="budget">
+            <div class="car-photo"><img src="fleet-dzire-noplate.png" alt="Maruti Suzuki Dzire taxi without visible registration plate" loading="lazy"></div>
+            <div class="car-body">
+              <span class="car-tag">Popular Sedan</span><h3>Maruti Suzuki Dzire</h3><div class="price">₹12<span>/km</span></div>
+              <div class="car-features"><div><i class="fa-solid fa-user"></i> 4 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 3 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Diesel</div></div>
+              <button class="btn btn-yellow" onclick="openCar('dzire')">View Details</button>
             </div>
           </article>
 
           <article class="car-card reveal" data-category="family">
-            <div class="car-photo">
-              <img src="ertiga.jpg" alt="Ertiga taxi" loading="lazy">
-            </div>
+            <div class="car-photo"><img src="fleet-ertiga-noplate.png" alt="Maruti Suzuki Ertiga taxi without visible registration plate" loading="lazy"></div>
             <div class="car-body">
-              <span class="car-tag">Family MUV</span>
-              <h3>Ertiga</h3>
-              <div class="price">₹13<span>/km</span></div>
-              <div class="car-features">
-                <div><i class="fa-solid fa-user"></i> 6+1 Seater</div>
-                <div><i class="fa-solid fa-suitcase"></i> 4 Bags</div>
-                <div><i class="fa-solid fa-snowflake"></i> AC</div>
-                <div><i class="fa-solid fa-road"></i> Outstation</div>
-              </div>
+              <span class="car-tag">Family MUV</span><h3>Maruti Suzuki Ertiga</h3><div class="price">₹15<span>/km</span></div>
+              <div class="car-features"><div><i class="fa-solid fa-user"></i> 7 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 4 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Diesel</div></div>
               <button class="btn btn-yellow" onclick="openCar('ertiga')">View Details</button>
             </div>
           </article>
 
           <article class="car-card reveal" data-category="family">
-            <div class="car-photo">
-              <img src="innova.jpg" alt="Toyota Innova taxi" loading="lazy">
-            </div>
+            <div class="car-photo"><img src="fleet-tavera-noplate.png" alt="Chevrolet Tavera taxi without visible registration plate" loading="lazy"></div>
             <div class="car-body">
-              <span class="car-tag">Comfort MUV</span>
-              <h3>Innova</h3>
-              <div class="price">₹17<span>/km</span></div>
-              <div class="car-features">
-                <div><i class="fa-solid fa-user"></i> 6+1 Seater</div>
-                <div><i class="fa-solid fa-suitcase"></i> 4 Bags</div>
-                <div><i class="fa-solid fa-snowflake"></i> AC</div>
-                <div><i class="fa-solid fa-road"></i> Long Trip</div>
-              </div>
-              <button class="btn btn-yellow" onclick="openCar('innova')">View Details</button>
+              <span class="car-tag">Large Family</span><h3>Chevrolet Tavera</h3><div class="price">₹16<span>/km</span></div>
+              <div class="car-features"><div><i class="fa-solid fa-user"></i> 9 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 5 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Diesel</div></div>
+              <button class="btn btn-yellow" onclick="openCar('tavera')">View Details</button>
             </div>
           </article>
 
           <article class="car-card reveal" data-category="premium">
-            <div class="car-photo">
-              <img src="crysta.jpg" alt="Innova Crysta taxi" loading="lazy">
-            </div>
+            <div class="car-photo"><img src="fleet-crysta-noplate.png" alt="Innova Crysta premium taxi without visible registration plate" loading="lazy"></div>
             <div class="car-body">
-              <span class="car-tag">Premium MUV</span>
-              <h3>Innova Crysta</h3>
-              <div class="price">₹17<span>/km</span></div>
-              <div class="car-features">
-                <div><i class="fa-solid fa-user"></i> 6+1 Seater</div>
-                <div><i class="fa-solid fa-suitcase"></i> 4 Bags</div>
-                <div><i class="fa-solid fa-snowflake"></i> AC</div>
-                <div><i class="fa-solid fa-crown"></i> Premium</div>
-              </div>
+              <span class="car-tag">Premium MUV</span><h3>Innova Crysta</h3><div class="price">₹18<span>/km</span></div>
+              <div class="car-features"><div><i class="fa-solid fa-user"></i> 6 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 4 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC</div><div><i class="fa-solid fa-crown"></i> Premium</div></div>
               <button class="btn btn-yellow" onclick="openCar('crysta')">View Details</button>
             </div>
           </article>
 
-          <article class="car-card reveal" data-category="budget">
-            <div class="car-photo">
-              <img src="wagonr.jpg" alt="WagonR taxi" loading="lazy">
-            </div>
+          <article class="car-card reveal" data-category="group">
+            <div class="car-photo"><img src="fleet-traveller.jpg" alt="Force Traveller group taxi" loading="lazy"></div>
             <div class="car-body">
-              <span class="car-tag">City Budget</span>
-              <h3>WagonR / Swift</h3>
-              <div class="price call">Call for Price</div>
-              <div class="car-features">
-                <div><i class="fa-solid fa-user"></i> 4 Seater</div>
-                <div><i class="fa-solid fa-suitcase"></i> 2 Bags</div>
-                <div><i class="fa-solid fa-snowflake"></i> AC</div>
-                <div><i class="fa-solid fa-city"></i> Local</div>
-              </div>
-              <button class="btn btn-yellow" onclick="openCar('wagonr')">View Details</button>
-            </div>
-          </article>
-
-          <article class="car-card reveal" data-category="premium">
-            <div class="car-photo">
-              <img src="city.jpg" alt="Honda City premium taxi" loading="lazy">
-            </div>
-            <div class="car-body">
-              <span class="car-tag">Premium Sedan</span>
-              <h3>Honda City / Ciaz</h3>
-              <div class="price call">Call for Price</div>
-              <div class="car-features">
-                <div><i class="fa-solid fa-user"></i> 4 Seater</div>
-                <div><i class="fa-solid fa-suitcase"></i> 3 Bags</div>
-                <div><i class="fa-solid fa-snowflake"></i> AC</div>
-                <div><i class="fa-solid fa-crown"></i> Premium</div>
-              </div>
-              <button class="btn btn-yellow" onclick="openCar('city')">View Details</button>
-            </div>
-          </article>
-
-          <article class="car-card reveal" data-category="family">
-            <div class="car-photo">
-              <img src="carens.jpg" alt="Kia Carens taxi" loading="lazy">
-            </div>
-            <div class="car-body">
-              <span class="car-tag">Premium Family</span>
-              <h3>Kia Carens</h3>
-              <div class="price call">Call for Price</div>
-              <div class="car-features">
-                <div><i class="fa-solid fa-user"></i> 6+1 Seater</div>
-                <div><i class="fa-solid fa-suitcase"></i> 4 Bags</div>
-                <div><i class="fa-solid fa-snowflake"></i> AC</div>
-                <div><i class="fa-solid fa-road"></i> Long Trip</div>
-              </div>
-              <button class="btn btn-yellow" onclick="openCar('carens')">View Details</button>
-            </div>
-          </article>
-
-          <article class="car-card reveal" data-category="premium">
-            <div class="car-photo">
-              <img src="fortuner.jpg" alt="Toyota Fortuner taxi" loading="lazy">
-            </div>
-            <div class="car-body">
-              <span class="car-tag">Luxury SUV</span>
-              <h3>Fortuner</h3>
-              <div class="price call">Call for Price</div>
-              <div class="car-features">
-                <div><i class="fa-solid fa-user"></i> 6+1 Seater</div>
-                <div><i class="fa-solid fa-suitcase"></i> 4 Bags</div>
-                <div><i class="fa-solid fa-snowflake"></i> AC</div>
-                <div><i class="fa-solid fa-gem"></i> Luxury</div>
-              </div>
-              <button class="btn btn-yellow" onclick="openCar('fortuner')">View Details</button>
+              <span class="car-tag">Family & Group</span><h3>Force Traveller</h3><div class="price">₹25<span>/km</span></div>
+              <div class="car-features"><div><i class="fa-solid fa-users"></i> 14 + Driver</div><div><i class="fa-solid fa-suitcase"></i> Group Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-route"></i> Tours</div></div>
+              <button class="btn btn-yellow" onclick="openCar('traveller14')">View Details</button>
             </div>
           </article>
 
           <article class="car-card reveal" data-category="group">
-            <div class="car-photo">
-              <img src="traveller.jpg" alt="Tempo Traveller taxi" loading="lazy">
-            </div>
+            <div class="car-photo"><img src="fleet-tempo.png" alt="17 seater Tempo Traveller taxi" loading="lazy"></div>
             <div class="car-body">
-              <span class="car-tag">Group Travel</span>
-              <h3>Tempo Traveller</h3>
-              <div class="price call">Call for Price</div>
-              <div class="car-features">
-                <div><i class="fa-solid fa-users"></i> 12 / 17 Seater</div>
-                <div><i class="fa-solid fa-suitcase"></i> Group Bags</div>
-                <div><i class="fa-solid fa-snowflake"></i> AC Options</div>
-                <div><i class="fa-solid fa-route"></i> Tours</div>
-              </div>
-              <button class="btn btn-yellow" onclick="openCar('traveller')">View Details</button>
+              <span class="car-tag">Group Travel</span><h3>Tempo Traveller 17 Seater</h3><div class="price">₹28<span>/km</span></div>
+              <div class="car-features"><div><i class="fa-solid fa-users"></i> 17 + Driver</div><div><i class="fa-solid fa-suitcase"></i> Group Bags</div><div><i class="fa-solid fa-snowflake"></i> AC Options</div><div><i class="fa-solid fa-route"></i> Tours</div></div>
+              <button class="btn btn-yellow" onclick="openCar('tempo17')">View Details</button>
+            </div>
+          </article>
+
+          <article class="car-card reveal" data-category="group">
+            <div class="car-photo"><img src="fleet-tempo.png" alt="20 seater Tempo Traveller taxi" loading="lazy"></div>
+            <div class="car-body">
+              <span class="car-tag">Large Group</span><h3>Tempo Traveller 20 Seater</h3><div class="price">₹30<span>/km</span></div>
+              <div class="car-features"><div><i class="fa-solid fa-users"></i> 20 + Driver</div><div><i class="fa-solid fa-suitcase"></i> Group Bags</div><div><i class="fa-solid fa-snowflake"></i> AC Options</div><div><i class="fa-solid fa-route"></i> Tours</div></div>
+              <button class="btn btn-yellow" onclick="openCar('tempo20')">View Details</button>
+            </div>
+          </article>
+
+          <article class="car-card reveal" data-category="group">
+            <div class="car-photo"><img src="fleet-tempo.png" alt="26 seater Tempo Traveller taxi" loading="lazy"></div>
+            <div class="car-body">
+              <span class="car-tag">Extra Large Group</span><h3>Tempo Traveller 26 Seater</h3><div class="price">₹36<span>/km</span></div>
+              <div class="car-features"><div><i class="fa-solid fa-users"></i> 26 + Driver</div><div><i class="fa-solid fa-suitcase"></i> Group Bags</div><div><i class="fa-solid fa-snowflake"></i> AC Options</div><div><i class="fa-solid fa-route"></i> Tours</div></div>
+              <button class="btn btn-yellow" onclick="openCar('tempo26')">View Details</button>
             </div>
           </article>
         </div>
@@ -856,59 +775,50 @@
     const businessPhone = "919770582434";
 
     const cars = {
-      sedan:{
-        name:"Sedan / Dzire",price:"₹11/km",
-        image:"dzire.jpg",
-        desc:"Affordable and comfortable option for couples, small families, airport pickup and outstation travel.",
-        features:["Up to 4 passengers","Approximately 3 bags","Air-conditioned car","One-way and round-trip option","Professional driver","Complete fare confirmed before booking"]
+      aura:{
+        name:"Hyundai Aura",price:"₹11/km",image:"fleet-aura-noplate.png",
+        desc:"Best-value sedan for airport transfers, Indore local rides and comfortable outstation travel.",
+        features:["4 passengers + driver","Approximately 3 bags","AC and non-AC availability","Diesel vehicle","Local and outstation trips","Final fare confirmed before booking"]
+      },
+      dzire:{
+        name:"Maruti Suzuki Dzire",price:"₹12/km",image:"fleet-dzire-noplate.png",
+        desc:"Popular comfortable sedan for couples, small families, airport pickup and outstation journeys.",
+        features:["4 passengers + driver","Approximately 3 bags","AC and non-AC availability","Diesel vehicle","One-way and round-trip option","Final fare confirmed before booking"]
       },
       ertiga:{
-        name:"Ertiga",price:"₹13/km",
-        image:"ertiga.jpg",
-        desc:"Spacious family car for religious tours, airport transfer and long-distance journeys.",
-        features:["Up to 6+1 passengers","Approximately 4 bags","Air-conditioned car","Comfortable family travel","Professional driver","Complete fare confirmed before booking"]
+        name:"Maruti Suzuki Ertiga",price:"₹15/km",image:"fleet-ertiga-noplate.png",
+        desc:"Spacious family MUV for religious tours, airport transfers and longer trips.",
+        features:["7 passengers + driver","Approximately 4 bags","AC and non-AC availability","Diesel vehicle","Family and outstation travel","Final fare confirmed before booking"]
       },
-      innova:{
-        name:"Innova",price:"₹17/km",
-        image:"innova.jpg",
-        desc:"Comfortable MUV for family tours, business travel and longer outstation journeys.",
-        features:["Up to 6+1 passengers","Approximately 4 bags","Air-conditioned car","Suitable for long journeys","Professional driver","Complete fare confirmed before booking"]
+      tavera:{
+        name:"Chevrolet Tavera",price:"₹16/km",image:"fleet-tavera-noplate.png",
+        desc:"Large family vehicle with flexible seating for pilgrimage, group and outstation travel.",
+        features:["9 passengers + driver","Approximately 5 bags","AC and non-AC availability","Diesel vehicle","Suitable for longer routes","Final fare confirmed before booking"]
       },
       crysta:{
-        name:"Innova Crysta",price:"₹17/km",
-        image:"crysta.jpg",
-        desc:"Premium comfort for family, corporate and long-distance travel.",
-        features:["Up to 6+1 passengers","Approximately 4 bags","Air-conditioned car","Premium seating comfort","Professional driver","Complete fare confirmed before booking"]
+        name:"Innova Crysta",price:"₹18/km",image:"fleet-crysta-noplate.png",
+        desc:"Premium comfort for families, corporate guests and long-distance journeys.",
+        features:["6 passengers + driver","Approximately 4 bags","Air-conditioned premium cabin","Diesel vehicle","Premium seating comfort","Final fare confirmed before booking"]
       },
-      wagonr:{
-        name:"WagonR / Swift",price:"Call for Price",
-        image:"wagonr.jpg",
-        desc:"Budget-friendly hatchback option for Indore local travel and short journeys.",
-        features:["Up to 4 passengers","Approximately 2 bags","Air-conditioned options","Best for local travel","Subject to availability","Fare confirmed before booking"]
+      traveller14:{
+        name:"Force Traveller 14 Seater",price:"₹25/km",image:"fleet-traveller.jpg",
+        desc:"Comfortable group vehicle for family tours, religious journeys, corporate groups and events.",
+        features:["14 passengers + driver","Group luggage space","AC and non-AC availability","Tour and outstation use","Professional driver","Final fare confirmed before booking"]
       },
-      city:{
-        name:"Honda City / Ciaz",price:"Call for Price",
-        image:"city.jpg",
-        desc:"Premium sedan option for corporate guests, airport transfers and comfortable travel.",
-        features:["Up to 4 passengers","Approximately 3 bags","Air-conditioned car","Premium sedan comfort","Subject to availability","Fare confirmed before booking"]
+      tempo17:{
+        name:"Tempo Traveller 17 Seater",price:"₹28/km",image:"fleet-tempo.png",
+        desc:"17-seater group taxi for tours, weddings, pilgrimages and long-distance travel.",
+        features:["17 passengers + driver","Group luggage space","AC options available","Tour and outstation use","Professional driver","Final fare confirmed before booking"]
       },
-      carens:{
-        name:"Kia Carens",price:"Call for Price",
-        image:"carens.jpg",
-        desc:"Premium family MUV with spacious seating for long journeys and group travel.",
-        features:["Up to 6+1 passengers","Approximately 4 bags","Air-conditioned car","Comfortable family option","Subject to availability","Fare confirmed before booking"]
+      tempo20:{
+        name:"Tempo Traveller 20 Seater",price:"₹30/km",image:"fleet-tempo.png",
+        desc:"Large 20-seater vehicle for bigger groups, events and comfortable multi-city journeys.",
+        features:["20 passengers + driver","Group luggage space","AC options available","Tour and event use","Professional driver","Final fare confirmed before booking"]
       },
-      fortuner:{
-        name:"Fortuner",price:"Call for Price",
-        image:"fortuner.jpg",
-        desc:"Luxury SUV option for premium travel, special guests and long-distance journeys.",
-        features:["Up to 6+1 passengers","Premium SUV comfort","Air-conditioned car","Luxury travel option","Subject to availability","Fare confirmed before booking"]
-      },
-      traveller:{
-        name:"Tempo Traveller",price:"Call for Price",
-        image:"traveller.jpg",
-        desc:"Group-travel vehicle for family tours, college groups, religious trips and events.",
-        features:["12-seater and 17-seater options","Group luggage space","AC options available","Suitable for tours","Subject to availability","Fare confirmed before booking"]
+      tempo26:{
+        name:"Tempo Traveller 26 Seater",price:"₹36/km",image:"fleet-tempo.png",
+        desc:"Extra-large group vehicle for corporate tours, weddings, pilgrimages and events.",
+        features:["26 passengers + driver","Large group luggage space","AC options available","Tour and event use","Professional driver","Final fare confirmed before booking"]
       }
     };
 
