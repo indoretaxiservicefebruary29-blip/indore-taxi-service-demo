@@ -62,29 +62,29 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
     :root{
-      --navy:#06172b;
-      --navy-2:#0a2444;
-      --navy-3:#102f55;
-      --yellow:#ffc400;
-      --yellow-2:#ffdc5c;
+      --navy:#07111f;
+      --navy-2:#0d2038;
+      --navy-3:#173553;
+      --yellow:#d9b45b;
+      --yellow-2:#f3d78d;
       --green:#20bf6b;
       --blue:#1677ff;
       --white:#fff;
-      --light:#f4f7fb;
-      --text:#101828;
+      --light:#f4f1e9;
+      --text:#162033;
       --muted:#667085;
-      --border:#e4e7ec;
-      --shadow:0 18px 55px rgba(6,23,43,.13);
-      --radius:18px;
+      --border:#e6dfd1;
+      --shadow:0 22px 65px rgba(7,17,31,.14);
+      --radius:22px;
     }
 
-    *{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;scroll-behavior:smooth}
-    body{background:#fff;color:var(--text);line-height:1.65}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"DM Sans",sans-serif;scroll-behavior:smooth}
+    body{background:#fcfbf8;color:var(--text);line-height:1.65}
     body.modal-open{overflow:hidden}
     a{text-decoration:none;color:inherit}
     img{display:block;max-width:100%}
@@ -92,20 +92,20 @@
     button{cursor:pointer}
     .container{width:min(1180px,92%);margin-inline:auto}
     .section{padding:86px 0}
-    .section-soft{background:var(--light)}
+    .section-soft{background:linear-gradient(180deg,#f8f6f1 0%,var(--light) 100%)}
     .section-dark{background:var(--navy);color:#fff}
     .section-head{text-align:center;margin-bottom:42px}
     .section-head .kicker{color:#c58d00;font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}
-    .section-head h2{font-size:clamp(31px,4vw,44px);line-height:1.18;color:var(--navy);margin:7px 0 10px}
+    .section-head h2{font-family:"Playfair Display",serif;font-size:clamp(34px,4vw,48px);line-height:1.14;color:var(--navy);margin:7px 0 10px;letter-spacing:-.6px}
     .section-head p{max-width:720px;margin:auto;color:var(--muted)}
     .section-dark .section-head h2,.section-dark .section-head p{color:#fff}
     .section-dark .section-head p{color:#c8d5e2}
 
-    .topbar{background:#020d19;color:#d5e1ed;font-size:13px}
+    .topbar{background:linear-gradient(90deg,#020914,#0a1c31);color:#d5e1ed;font-size:13px;border-bottom:1px solid rgba(217,180,91,.2)}
     .topbar-inner{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:20px}
     .topbar a:hover{color:var(--yellow)}
 
-    .header{position:sticky;top:0;z-index:1100;background:rgba(6,23,43,.97);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(12px)}
+    .header{position:sticky;top:0;z-index:1100;background:rgba(7,17,31,.94);border-bottom:1px solid rgba(217,180,91,.24);backdrop-filter:blur(18px);box-shadow:0 10px 35px rgba(0,0,0,.16)}
     .header-inner{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand{width:235px;min-width:205px}
     .brand img{width:100%;height:78px;object-fit:contain;object-position:left center}
@@ -115,7 +115,7 @@
     .nav a{color:#f8fafc;font-size:13px;font-weight:600;position:relative}
     .nav a:after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:2px;background:var(--yellow);transition:.25s}
     .nav a:hover:after{width:100%}
-    .header-call{background:var(--yellow);color:var(--navy);padding:12px 17px;border-radius:10px;font-weight:800;white-space:nowrap;box-shadow:0 10px 25px rgba(255,196,0,.2)}
+    .header-call{background:linear-gradient(135deg,var(--yellow-2),var(--yellow));color:var(--navy);padding:12px 19px;border-radius:999px;font-weight:800;white-space:nowrap;box-shadow:0 10px 28px rgba(217,180,91,.24);border:1px solid rgba(255,255,255,.2)}
     .menu-btn{display:none;border:0;background:transparent;color:#fff;font-size:27px}
 
     .hero{min-height:720px;position:relative;display:grid;align-items:center;isolation:isolate;background:
@@ -124,20 +124,20 @@
     .hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(2,13,25,.55),transparent 55%)}
     .hero-grid{padding:78px 0;display:grid;grid-template-columns:1.04fr .96fr;gap:54px;align-items:center}
     .hero-badge{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(255,196,0,.45);border-radius:999px;background:rgba(255,196,0,.08);color:var(--yellow);font-size:12px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;margin-bottom:18px}
-    .hero h1{color:#fff;font-size:clamp(42px,5.3vw,70px);line-height:1.07;max-width:700px}
+    .hero h1{font-family:"Playfair Display",serif;color:#fff;font-size:clamp(44px,5.3vw,72px);line-height:1.04;max-width:700px;letter-spacing:-1.2px}
     .hero h1 span{color:var(--yellow)}
     .hero-copy>p{color:#d8e3ee;font-size:17px;max-width:640px;margin:20px 0 29px}
     .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
-    .btn{border:0;border-radius:10px;padding:13px 20px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;transition:transform .2s,box-shadow .2s}
+    .btn{border:0;border-radius:999px;padding:13px 22px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;transition:transform .2s,box-shadow .2s,filter .2s}
     .btn:hover{transform:translateY(-2px)}
-    .btn-yellow{background:var(--yellow);color:var(--navy);box-shadow:0 11px 28px rgba(255,196,0,.22)}
+    .btn-yellow{background:linear-gradient(135deg,var(--yellow-2),var(--yellow));color:var(--navy);box-shadow:0 11px 28px rgba(217,180,91,.25);border:1px solid rgba(126,91,21,.1)}
     .btn-white{background:#fff;color:var(--navy)}
     .btn-outline{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.65)}
     .btn-whatsapp{background:var(--green);color:#fff}
     .btn-navy{background:var(--navy);color:#fff}
 
-    .booking-card{background:rgba(255,255,255,.97);padding:29px;border-radius:20px;box-shadow:0 28px 75px rgba(0,0,0,.34);border:1px solid rgba(255,255,255,.75)}
-    .booking-card h2{font-size:26px;color:var(--navy)}
+    .booking-card{background:linear-gradient(145deg,rgba(255,255,255,.99),rgba(247,243,234,.98));padding:31px;border-radius:26px;box-shadow:0 32px 90px rgba(0,0,0,.38);border:1px solid rgba(217,180,91,.52)}
+    .booking-card h2{font-family:"Playfair Display",serif;font-size:29px;color:var(--navy)}
     .booking-card>p{font-size:13px;color:var(--muted);margin:4px 0 18px}
     .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     .field.full{grid-column:1/-1}
@@ -147,7 +147,7 @@
     .booking-card .btn{width:100%;margin-top:14px}
 
     .trust-strip{margin-top:-38px;position:relative;z-index:5}
-    .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+    .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);background:linear-gradient(135deg,#fff,#faf7f0);border-radius:22px;box-shadow:var(--shadow);overflow:hidden;border:1px solid rgba(217,180,91,.3)}
     .trust-item{padding:24px 20px;display:flex;align-items:center;gap:13px;border-right:1px solid var(--border)}
     .trust-item:last-child{border-right:0}
     .trust-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:13px;background:#fff7d1;color:#b98500;font-size:20px;flex:0 0 48px}
@@ -155,21 +155,22 @@
     .trust-item p{font-size:12px;color:var(--muted)}
 
     .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .service-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:25px 21px;box-shadow:0 9px 28px rgba(6,23,43,.06);transition:.25s}
+    .service-card{background:linear-gradient(145deg,#fff,#faf8f3);border:1px solid var(--border);border-radius:20px;padding:27px 23px;box-shadow:0 12px 34px rgba(7,17,31,.07);transition:.25s}
     .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
     .service-icon{width:54px;height:54px;display:grid;place-items:center;border-radius:14px;background:#fff7d1;color:#b98500;font-size:23px;margin-bottom:16px}
     .service-card h3{color:var(--navy);font-size:18px;margin-bottom:7px}
     .service-card p{font-size:13px;color:var(--muted)}
 
     .fleet-filter{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin-bottom:30px}
-    .filter-btn{border:1px solid var(--border);background:#fff;color:#344054;padding:9px 15px;border-radius:999px;font-weight:700;font-size:12px}
-    .filter-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+    .filter-btn{border:1px solid #d8cfbd;background:rgba(255,255,255,.9);color:#344054;padding:10px 17px;border-radius:999px;font-weight:700;font-size:12px;box-shadow:0 6px 18px rgba(7,17,31,.04)}
+    .filter-btn.active{background:linear-gradient(135deg,var(--navy),var(--navy-3));color:var(--yellow-2);border-color:var(--navy);box-shadow:0 10px 24px rgba(7,17,31,.2)}
     .fleet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:19px}
-    .car-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border);border-radius:17px;overflow:hidden;box-shadow:0 10px 30px rgba(6,23,43,.08);transition:.25s}
-    .car-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .car-card{display:flex;flex-direction:column;background:linear-gradient(160deg,#fff 0%,#fbf8f2 100%);border:1px solid rgba(190,158,82,.38);border-radius:22px;overflow:hidden;box-shadow:0 14px 38px rgba(7,17,31,.09);transition:.3s;position:relative}
+    .car-card:after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.9)}
+    .car-card:hover{transform:translateY(-8px);box-shadow:0 28px 65px rgba(7,17,31,.16);border-color:rgba(190,158,82,.7)}
     .car-photo{height:220px;background:
-      radial-gradient(circle at top right, rgba(255,255,255,.95), rgba(240,245,250,.95)),
-      linear-gradient(180deg,#fbfcfe,#edf2f7);
+      radial-gradient(circle at top right, rgba(255,255,255,.98), rgba(241,236,225,.94)),
+      linear-gradient(180deg,#fdfcf9,#eee8dc);
       padding:16px;overflow:hidden;position:relative}
     .car-photo:before{content:"";position:absolute;left:14px;right:14px;bottom:12px;height:18px;
       background:radial-gradient(ellipse at center, rgba(6,23,43,.18), rgba(6,23,43,0) 70%);
@@ -180,9 +181,9 @@
     .car-card:hover .car-photo img{transform:scale(1.04);
       filter:contrast(1.06) saturate(1.12) drop-shadow(0 16px 26px rgba(6,23,43,.2))}
     .car-body{padding:19px;display:flex;flex-direction:column;flex:1}
-    .car-tag{display:inline-flex;align-self:flex-start;background:#eef4fb;color:var(--navy);border-radius:999px;padding:5px 9px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
-    .car-body h3{font-size:19px;color:var(--navy)}
-    .price{font-size:29px;font-weight:800;color:var(--navy);margin:6px 0 11px}
+    .car-tag{display:inline-flex;align-self:flex-start;background:#f3e8c9;color:#745716;border:1px solid #e2c77c;border-radius:999px;padding:5px 10px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;margin-bottom:9px}
+    .car-body h3{font-family:"Playfair Display",serif;font-size:21px;color:var(--navy)}
+    .price{font-size:30px;font-weight:800;color:#9a741e;margin:6px 0 11px}
     .price span{font-size:13px}
     .price.call{font-size:20px;margin-top:12px}
     .car-features{display:grid;grid-template-columns:1fr 1fr;gap:8px 10px;padding:12px 0;border-top:1px solid var(--border);font-size:11px;color:#475467;margin-bottom:15px}
@@ -507,7 +508,7 @@
             <div class="car-photo"><img src="fleet-aura-noplate.png" alt="Hyundai Aura taxi without visible registration plate" loading="lazy"></div>
             <div class="car-body">
               <span class="car-tag">Economy Sedan</span><h3>Hyundai Aura</h3><div class="price">₹11<span>/km</span></div>
-              <div class="car-features"><div><i class="fa-solid fa-user"></i> 4 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 3 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Diesel</div></div>
+              <div class="car-features"><div><i class="fa-solid fa-user"></i> 4 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 3 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Petrol + CNG</div></div>
               <button class="btn btn-yellow" onclick="openCar('aura')">View Details</button>
             </div>
           </article>
@@ -516,7 +517,7 @@
             <div class="car-photo"><img src="fleet-dzire-noplate.png" alt="Maruti Suzuki Dzire taxi without visible registration plate" loading="lazy"></div>
             <div class="car-body">
               <span class="car-tag">Popular Sedan</span><h3>Maruti Suzuki Dzire</h3><div class="price">₹12<span>/km</span></div>
-              <div class="car-features"><div><i class="fa-solid fa-user"></i> 4 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 3 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Diesel</div></div>
+              <div class="car-features"><div><i class="fa-solid fa-user"></i> 4 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 3 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Petrol + CNG</div></div>
               <button class="btn btn-yellow" onclick="openCar('dzire')">View Details</button>
             </div>
           </article>
@@ -525,7 +526,7 @@
             <div class="car-photo"><img src="fleet-ertiga-noplate.png" alt="Maruti Suzuki Ertiga taxi without visible registration plate" loading="lazy"></div>
             <div class="car-body">
               <span class="car-tag">Family MUV</span><h3>Maruti Suzuki Ertiga</h3><div class="price">₹14<span>/km</span></div>
-              <div class="car-features"><div><i class="fa-solid fa-user"></i> 7 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 4 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Diesel</div></div>
+              <div class="car-features"><div><i class="fa-solid fa-user"></i> 7 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 4 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Petrol + CNG</div></div>
               <button class="btn btn-yellow" onclick="openCar('ertiga')">View Details</button>
             </div>
           </article>
@@ -534,7 +535,7 @@
             <div class="car-photo"><img src="fleet-crysta-noplate.png" alt="Innova Crysta premium taxi without visible registration plate" loading="lazy"></div>
             <div class="car-body">
               <span class="car-tag">Premium MUV</span><h3>Innova Crysta</h3><div class="price">₹18<span>/km</span></div>
-              <div class="car-features"><div><i class="fa-solid fa-user"></i> 6 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 4 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC</div><div><i class="fa-solid fa-crown"></i> Premium</div></div>
+              <div class="car-features"><div><i class="fa-solid fa-user"></i> 6 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 4 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC</div><div><i class="fa-solid fa-gas-pump"></i> Diesel</div></div>
               <button class="btn btn-yellow" onclick="openCar('crysta')">View Details</button>
             </div>
           </article>
@@ -862,17 +863,17 @@
       aura:{
         name:"Hyundai Aura",price:"₹11/km",image:"fleet-aura-noplate.png",
         desc:"Economy sedan for airport transfers, Indore local rides and comfortable outstation travel.",
-        features:["4 passengers + driver","Approximately 3 bags","AC and non-AC availability","Diesel vehicle","Local and outstation trips","Final fare confirmed before booking"]
+        features:["4 passengers + driver","Approximately 3 bags","AC and non-AC availability","Petrol and CNG options","Local and outstation trips","Final fare confirmed before booking"]
       },
       dzire:{
         name:"Maruti Suzuki Dzire",price:"₹12/km",image:"fleet-dzire-noplate.png",
         desc:"Popular comfortable sedan for couples, small families, airport pickup and outstation journeys.",
-        features:["4 passengers + driver","Approximately 3 bags","AC and non-AC availability","Diesel vehicle","One-way and round-trip option","Final fare confirmed before booking"]
+        features:["4 passengers + driver","Approximately 3 bags","AC and non-AC availability","Petrol and CNG options","One-way and round-trip option","Final fare confirmed before booking"]
       },
       ertiga:{
         name:"Maruti Suzuki Ertiga",price:"₹14/km",image:"fleet-ertiga-noplate.png",
         desc:"Spacious family MUV for religious tours, airport transfers and longer trips.",
-        features:["7 passengers + driver","Approximately 4 bags","AC and non-AC availability","Diesel vehicle","Family and outstation travel","Final fare confirmed before booking"]
+        features:["7 passengers + driver","Approximately 4 bags","AC and non-AC availability","Petrol and CNG options","Family and outstation travel","Final fare confirmed before booking"]
       },
       tavera:{
         name:"Chevrolet Tavera",price:"₹16/km",image:"fleet-tavera-noplate.png",
