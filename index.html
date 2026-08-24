@@ -495,11 +495,38 @@
 
         <div class="fleet-grid">
           <article class="car-card reveal" data-category="budget">
-            <div class="car-photo"><img src="fleet-aura-noplate.png" alt="Hyundai Aura taxi without visible registration plate" loading="lazy"></div>
+            <div class="car-photo"><img src="fleet-honda-amaze-noplate.png" alt="Honda Amaze taxi without visible registration plate" loading="lazy"></div>
             <div class="car-body">
-              <span class="car-tag">Best Value Sedan</span><h3>Hyundai Aura</h3><div class="price">₹11<span>/km</span></div>
-              <div class="car-features"><div><i class="fa-solid fa-user"></i> 4 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 3 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Diesel</div></div>
-              <button class="btn btn-yellow" onclick="openCar('aura')">View Details</button>
+              <span class="car-tag">Best Value Sedan</span><h3>Honda Amaze</h3><div class="price">₹12<span>/km</span></div>
+              <div class="car-features"><div><i class="fa-solid fa-user"></i> 4 Members + Driver</div><div><i class="fa-solid fa-suitcase"></i> 3 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> CNG + Petrol</div></div>
+              <button class="btn btn-yellow" onclick="openCar('amaze')">View Details</button>
+            </div>
+          </article>
+
+          <article class="car-card reveal" data-category="premium">
+            <div class="car-photo"><img src="fleet-crysta-noplate.png" alt="Innova Crysta premium taxi without visible registration plate" loading="lazy"></div>
+            <div class="car-body">
+              <span class="car-tag">Premium MUV</span><h3>Innova Crysta</h3><div class="price">₹18<span>/km</span></div>
+              <div class="car-features"><div><i class="fa-solid fa-user"></i> 6 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 4 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC</div><div><i class="fa-solid fa-crown"></i> Premium</div></div>
+              <button class="btn btn-yellow" onclick="openCar('crysta')">View Details</button>
+            </div>
+          </article>
+
+          <article class="car-card reveal" data-category="group">
+            <div class="car-photo"><img src="fleet-force-toofan-noplate.png" alt="Force Toofan taxi without visible registration plate" loading="lazy"></div>
+            <div class="car-body">
+              <span class="car-tag">Group Utility</span><h3>Force Toofan</h3><div class="price">₹18<span>/km</span></div>
+              <div class="car-features"><div><i class="fa-solid fa-users"></i> 12 Members + Driver</div><div><i class="fa-solid fa-suitcase"></i> 6 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Diesel</div></div>
+              <button class="btn btn-yellow" onclick="openCar('toofan')">View Details</button>
+            </div>
+          </article>
+
+          <article class="car-card reveal" data-category="premium">
+            <div class="car-photo"><img src="fleet-force-urbania-noplate.png" alt="Force Urbania premium taxi without visible registration plate" loading="lazy"></div>
+            <div class="car-body">
+              <span class="car-tag">Premium Group Van</span><h3>Force Urbania</h3><div class="price">₹35<span>/km</span></div>
+              <div class="car-features"><div><i class="fa-solid fa-users"></i> 12 Members + Driver</div><div><i class="fa-solid fa-suitcase"></i> 8 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Diesel</div></div>
+              <button class="btn btn-yellow" onclick="openCar('urbania')">View Details</button>
             </div>
           </article>
 
@@ -527,15 +554,6 @@
               <span class="car-tag">Large Family</span><h3>Chevrolet Tavera</h3><div class="price">₹16<span>/km</span></div>
               <div class="car-features"><div><i class="fa-solid fa-user"></i> 9 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 5 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC / Non AC</div><div><i class="fa-solid fa-gas-pump"></i> Diesel</div></div>
               <button class="btn btn-yellow" onclick="openCar('tavera')">View Details</button>
-            </div>
-          </article>
-
-          <article class="car-card reveal" data-category="premium">
-            <div class="car-photo"><img src="fleet-crysta-noplate.png" alt="Innova Crysta premium taxi without visible registration plate" loading="lazy"></div>
-            <div class="car-body">
-              <span class="car-tag">Premium MUV</span><h3>Innova Crysta</h3><div class="price">₹18<span>/km</span></div>
-              <div class="car-features"><div><i class="fa-solid fa-user"></i> 6 + Driver</div><div><i class="fa-solid fa-suitcase"></i> 4 Bags</div><div><i class="fa-solid fa-snowflake"></i> AC</div><div><i class="fa-solid fa-crown"></i> Premium</div></div>
-              <button class="btn btn-yellow" onclick="openCar('crysta')">View Details</button>
             </div>
           </article>
 
@@ -827,10 +845,10 @@
     const businessPhone = "919770582434";
 
     const cars = {
-      aura:{
-        name:"Hyundai Aura",price:"₹11/km",image:"fleet-aura-noplate.png",
-        desc:"Best-value sedan for airport transfers, Indore local rides and comfortable outstation travel.",
-        features:["4 passengers + driver","Approximately 3 bags","AC and non-AC availability","Diesel vehicle","Local and outstation trips","Final fare confirmed before booking"]
+      amaze:{
+        name:"Honda Amaze",price:"₹12/km",image:"fleet-honda-amaze-noplate.png",
+        desc:"Comfortable sedan for airport transfers, Indore local rides and smooth outstation travel.",
+        features:["4 members + driver","Approximately 3 bags","AC and non-AC availability","CNG and petrol options","Local and outstation trips","Final fare confirmed before booking"]
       },
       dzire:{
         name:"Maruti Suzuki Dzire",price:"₹12/km",image:"fleet-dzire-noplate.png",
@@ -851,6 +869,16 @@
         name:"Innova Crysta",price:"₹18/km",image:"fleet-crysta-noplate.png",
         desc:"Premium comfort for families, corporate guests and long-distance journeys.",
         features:["6 passengers + driver","Approximately 4 bags","Air-conditioned premium cabin","Diesel vehicle","Premium seating comfort","Final fare confirmed before booking"]
+      },
+      toofan:{
+        name:"Force Toofan",price:"₹18/km",image:"fleet-force-toofan-noplate.png",
+        desc:"Spacious 12-member utility taxi for family groups, pilgrimages and outstation travel.",
+        features:["12 members + driver","Approximately 6 bags","AC and non-AC availability","Diesel vehicle","Group and outstation travel","Final fare confirmed before booking"]
+      },
+      urbania:{
+        name:"Force Urbania",price:"₹35/km",image:"fleet-force-urbania-noplate.png",
+        desc:"Premium 12-member passenger van for comfortable group tours, corporate travel and long journeys.",
+        features:["12 members + driver","Approximately 8 bags","AC and non-AC availability","Diesel vehicle","Premium group travel","Final fare confirmed before booking"]
       },
       traveller14:{
         name:"Force Traveller 14 Seater",price:"₹25/km",image:"fleet-traveller.jpg",
